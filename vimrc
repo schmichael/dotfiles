@@ -19,4 +19,4 @@ Plug 'hashivim/vim-hashicorp-tools'
 call plug#end()
 
 " tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <Leader>tt :TagbarToggle<CR>
