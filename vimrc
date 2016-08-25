@@ -20,3 +20,16 @@ call plug#end()
 
 " tagbar
 nmap <Leader>tt :TagbarToggle<CR>
+
+" Always draw status line
+set laststatus=2
+
+" Display more stuffs in the status line
+set statusline=%F%m%r%h%w%=[%{&ff}/%Y]\ %5.5l\/%L\ \ %3.3c
+
+" case insensitive searches if no uppercase characters
+set smartcase
+
+" set terminal title
+set title
+set titlestring=%f%(\ [%M]%)
