@@ -7,7 +7,6 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 " it's ok. just :Ack <something>
 Plug 'mileszs/ack.vim'
-" don't use it much, but handy on big repos
 Plug 'scrooloose/nerdtree'
 " IDEish but handy for big files
 Plug 'majutsushi/tagbar'
@@ -20,6 +19,15 @@ call plug#end()
 
 " tagbar
 nmap <Leader>tt :TagbarToggle<CR>
+
+" nerdtree
+nmap <Leader>nn :NERDTreeToggle<CR>
+
+" go
+nmap <Leader>gb :GoBuild<CR>
+" Make Lgi a shortcut to !go install instead of GoInstall as the shell
+" command will execute in cwd which is usually the project root.
+nmap <leader>gi :!go install<CR>
 
 " Always draw status line
 set laststatus=2
