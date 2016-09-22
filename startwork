@@ -1,0 +1,24 @@
+#!/bin/bash
+
+tmux -2 new-session -d -s work
+
+# Window 1; vertical split
+tmux new-window -t work:1 -n 'scratch'
+tmux split-window -h
+
+# Window 2; daemons
+tmux new-window -t work:2 -n 'daemons'
+tmux split-window -h
+tmux split-window
+
+# Window 3; vim
+tmux new-window -t work:3 -n 'vim'
+
+# Window 4; tests
+tmux new-window -t work:4 -n 'tests'
+
+# Set default window
+tmux select-window -t work:1
+
+# Attach to session
+tmux -2 attach-session -t work
