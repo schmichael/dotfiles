@@ -28,6 +28,7 @@ nmap <Leader>gb :GoBuild<CR>
 " Make Lgi a shortcut to !go install instead of GoInstall as the shell
 " command will execute in cwd which is usually the project root.
 nmap <leader>gi :!go install<CR>
+let g:go_fmt_command = "goimports"
 
 " Always draw status line
 set laststatus=2

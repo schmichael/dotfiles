@@ -127,6 +127,11 @@ gocd () {
   fi
 }
 
+# I mean why type any more than I have to?
+cdnomad() {
+  cd $GOPATH/src/github.com/hashicorp/nomad
+}
+
 # Optional tab completion wrapper for $GOPATH/src
 _gopath () {
   local cur
@@ -140,3 +145,7 @@ _gopath () {
   done
 }  
 complete -o nospace -F _gopath gocd 
+
+# be like macOS
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
