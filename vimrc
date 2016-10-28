@@ -3,6 +3,8 @@ set background=dark
 call plug#begin()
 " Greatest go plugin ever
 Plug 'fatih/vim-go'
+" fatih does it again
+Plug 'fatih/vim-hclfmt'
 " don't use it much, handy for :Gbrowse
 Plug 'tpope/vim-fugitive'
 " it's ok. just :Ack <something>
