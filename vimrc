@@ -4,7 +4,7 @@ call plug#begin()
 " Greatest go plugin ever
 Plug 'fatih/vim-go'
 " fatih does it again
-Plug 'fatih/vim-hclfmt'
+"Plug 'fatih/vim-hclfmt'
 " don't use it much, handy for :Gbrowse
 Plug 'tpope/vim-fugitive'
 " it's ok. just :Ack <something>
@@ -27,6 +27,7 @@ nmap <Leader>nn :NERDTreeToggle<CR>
 
 " go
 nmap <Leader>gb :GoBuild<CR>
+nmap <Leader>gt :GoTest -c<CR>
 " Make Lgi a shortcut to !go install instead of GoInstall as the shell
 " command will execute in cwd which is usually the project root.
 nmap <leader>gi :!go install<CR>
@@ -44,3 +45,6 @@ set smartcase
 " set terminal title
 set title
 set titlestring=%f%(\ [%M]%)
+
+" Spaces in bash files
+autocmd FileType sh set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
