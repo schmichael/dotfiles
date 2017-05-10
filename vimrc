@@ -30,8 +30,10 @@ nmap <Leader>gb :GoBuild<CR>
 nmap <Leader>gt :GoTest -c<CR>
 " Make Lgi a shortcut to !go install instead of GoInstall as the shell
 " command will execute in cwd which is usually the project root.
-nmap <leader>gi :!go install<CR>
+nmap <leader>gi :GoInstall github.com/hashicorp/nomad<CR>
 let g:go_fmt_command = "goimports"
+autocmd FileType go setlocal foldmethod=syntax
+autocmd FileType go normal   zR
 
 " Always draw status line
 set laststatus=2
