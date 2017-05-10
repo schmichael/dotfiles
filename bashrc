@@ -150,6 +150,11 @@ complete -o nospace -F _gopath gocd
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+# Include local only file if it exists
+if [ -f $HOME/.bash_local ]; then
+    source "$HOME/.bash_local"
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /home/schmichael/local/google-cloud-sdk/path.bash.inc ]; then
   source '/home/schmichael/local/google-cloud-sdk/path.bash.inc'
