@@ -164,3 +164,6 @@ fi
 if [ -f /home/schmichael/local/google-cloud-sdk/completion.bash.inc ]; then
   source '/home/schmichael/local/google-cloud-sdk/completion.bash.inc'
 fi
+
+# added by travis gem
+[ -f /home/schmichael/.travis/travis.sh ] && source /home/schmichael/.travis/travis.sh

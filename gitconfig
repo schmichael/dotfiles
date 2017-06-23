@@ -1,3 +1,5 @@
 [user]
 	name = Michael Schurter
 	email = schmichael@hashicorp.com
+[http]
+	cookiefile = /home/schmichael/.gitcookies

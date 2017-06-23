@@ -7,6 +7,8 @@ Plug 'fatih/vim-go'
 "Plug 'fatih/vim-hclfmt'
 " don't use it much, handy for :Gbrowse
 Plug 'tpope/vim-fugitive'
+" needed for :Gbrowse
+Plug 'tpope/vim-rhubarb'
 " it's ok. just :Ack <something>
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
@@ -49,4 +51,7 @@ set title
 set titlestring=%f%(\ [%M]%)
 
 " Spaces in bash files
-autocmd FileType sh set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+autocmd FileType sh setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
+
+" Spaces in html files
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
