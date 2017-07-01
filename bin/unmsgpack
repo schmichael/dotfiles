@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+
+import sys,json,msgpack; json.dump(msgpack.load(sys.stdin.buffer, encoding="utf8"), sys.stdout, indent=4)
