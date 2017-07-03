@@ -9,8 +9,8 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 " needed for :Gbrowse
 Plug 'tpope/vim-rhubarb'
-" it's ok. just :Ack <something>
-Plug 'mileszs/ack.vim'
+" upgrade from ack to ripgrep
+Plug 'jremmen/vim-ripgrep'
 Plug 'scrooloose/nerdtree'
 " IDEish but handy for big files
 Plug 'majutsushi/tagbar'
@@ -50,8 +50,18 @@ set smartcase
 set title
 set titlestring=%f%(\ [%M]%)
 
+" Skip files I never want to open
+set wildignore+=*/.git/*,*/tmp/*,*.swp
+
 " Spaces in bash files
 autocmd FileType sh setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 " Spaces in html files
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+
+" Faster ctrlp
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+endif
