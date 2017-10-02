@@ -59,6 +59,10 @@ autocmd FileType sh setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smar
 " Spaces in html files
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 
+" Spellcheck in docs
+autocmd FileType markdown setlocal spell
+set spellfile=$HOME/.vim/spellfile.utf-8.add
+
 " Faster ctrlp
 if executable('rg')
   set grepprg=rg\ --color=never
