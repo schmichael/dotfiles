@@ -167,3 +167,9 @@ fi
 
 # added by travis gem
 [ -f /home/schmichael/.travis/travis.sh ] && source /home/schmichael/.travis/travis.sh
+
+# If a binary isn't in its cached location, look it up on PATH
+shopt -s checkhash
+
+
+complete -C /home/schmichael/go/bin/nomad nomad
