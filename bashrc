@@ -171,5 +171,8 @@ fi
 # If a binary isn't in its cached location, look it up on PATH
 shopt -s checkhash
 
+# Add timestamp to history
+export HISTTIMEFORMAT='%F %T '
 
-complete -C /home/schmichael/go/bin/nomad nomad
+
+complete -C nomad nomad
