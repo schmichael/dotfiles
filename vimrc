@@ -26,7 +26,7 @@ call plug#end()
 " ctags
 let g:gutentags_ctags_tagfile="tags"
 let g:gutentags_ctags_exclude=["vendor/*", "ui/*", "demo/*", "terraform/*"]
-map <C-o> :CtrlPTag<Enter>
+map <C-l> :CtrlPTag<Enter>
 
 " tagbar
 nmap <Leader>tt :TagbarToggle<CR>
