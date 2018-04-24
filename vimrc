@@ -1,4 +1,5 @@
 set background=dark
+set number
 
 call plug#begin()
 " Greatest go plugin ever
@@ -19,7 +20,13 @@ Plug 'kien/ctrlp.vim'
 " Nice way to see changes and revert hunks
 Plug 'airblade/vim-gitgutter'
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
+
+" ctags
+let g:gutentags_ctags_tagfile="tags"
+let g:gutentags_ctags_exclude=["vendor/*", "ui/*", "demo/*", "terraform/*"]
+map <C-o> :CtrlPTag<Enter>
 
 " tagbar
 nmap <Leader>tt :TagbarToggle<CR>
@@ -34,7 +41,7 @@ nmap <Leader>gt :GoTest -c<CR>
 " command will execute in cwd which is usually the project root.
 nmap <leader>gi :GoInstall github.com/hashicorp/nomad<CR>
 let g:go_fmt_command = "goimports"
-autocmd FileType go setlocal foldmethod=syntax
+autocmd FileType go setlocal foldmethod=syntax foldlevel=999 foldminlines=3
 autocmd FileType go normal   zR
 
 " Always draw status line
