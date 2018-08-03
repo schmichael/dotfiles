@@ -3,3 +3,5 @@
 	email = schmichael@hashicorp.com
 [http]
 	cookiefile = /home/schmichael/.gitcookies
+[pull]
+	ff = only
