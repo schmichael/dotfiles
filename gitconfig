@@ -5,3 +5,6 @@
 	cookiefile = /home/schmichael/.gitcookies
 [pull]
 	ff = only
+[rebase]
+	stat = true
+	missingCommitsCheck = warn

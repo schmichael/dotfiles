@@ -178,3 +178,5 @@ alias shruggie='echo -n "¯\_(ツ)_/¯" | pbcopy'
 complete -C nomad nomad
 
 complete -C /home/schmichael/go/bin/nomad nomad
+
+shuf -n 1 $HOME/.quotes
