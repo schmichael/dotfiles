@@ -3,7 +3,7 @@ set number
 
 call plug#begin()
 " Greatest go plugin ever
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'tag': '*' }
 " fatih does it again
 "Plug 'fatih/vim-hclfmt'
 " don't use it much, handy for :Gbrowse
