@@ -1,6 +1,7 @@
 [user]
 	name = Michael Schurter
-	email = schmichael@hashicorp.com
+	email = mschurter@hashicorp.com
+	#signingkey = BF18253222CA9B07
 [http]
 	cookiefile = /home/schmichael/.gitcookies
 [pull]
@@ -8,3 +9,7 @@
 [rebase]
 	stat = true
 	missingCommitsCheck = warn
+[commit]
+	#gpgsign = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
