@@ -113,9 +113,9 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$HOME/bin:$GOPATH/bin
 
-export VCPROMPT_FORMAT="[%n:%b]"
-#PS1='$(vcprompt)${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\[\033[00m\]\[\033[01;34m\]\w\[\033[00m\]\$ '
-PS1='$(vcprompt)\[\033[01;34m\]\w\[\033[00m\]\$ '
+# Git
+source $HOME/bin/git-prompt.sh
+PS1='$(__git_ps1)\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # Bash wrapper to change directory to the output of gocd
 gocd () {
@@ -178,5 +178,3 @@ alias shruggie='echo -n "¯\_(ツ)_/¯" | pbcopy'
 complete -C nomad nomad
 
 complete -C /home/schmichael/go/bin/nomad nomad
-
-shuf -n 1 $HOME/.quotes
