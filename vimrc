@@ -1,32 +1,34 @@
+" Necessary when using Vim's builtin package manager
+filetype plugin indent on
+
+" lines of context to keep visible
+set scrolloff=1
+
 set background=dark
 set number
 
-call plug#begin()
+" fix gqq
+set autoindent
+
+" support mouse (*gasp*)
+set mouse=a
+
+""call plug#begin()
 " Greatest go plugin ever
-Plug 'fatih/vim-go', { 'tag': '*' }
+""Plug 'fatih/vim-go', { 'tag': '*' }
 " fatih does it again
 "Plug 'fatih/vim-hclfmt'
-" don't use it much, handy for :Gbrowse
-Plug 'tpope/vim-fugitive'
-" needed for :Gbrowse
-Plug 'tpope/vim-rhubarb'
-" upgrade from ack to ripgrep
-Plug 'jremmen/vim-ripgrep'
-Plug 'scrooloose/nerdtree'
-" IDEish but handy for big files
-Plug 'majutsushi/tagbar'
-" Greatest file finder ever
-Plug 'kien/ctrlp.vim'
+""Plug 'scrooloose/nerdtree'
 " Nice way to see changes and revert hunks
-Plug 'airblade/vim-gitgutter'
-Plug 'hashivim/vim-hashicorp-tools'
-Plug 'ludovicchabant/vim-gutentags'
-call plug#end()
+""Plug 'airblade/vim-gitgutter'
+""Plug 'hashivim/vim-hashicorp-tools'
+""Plug 'ludovicchabant/vim-gutentags'
+""call plug#end()
 
 " ctags
-let g:gutentags_ctags_tagfile="tags"
-let g:gutentags_ctags_exclude=["vendor/*", "ui/*", "demo/*", "terraform/*"]
-map <C-k> :CtrlPTag<Enter>
+""let g:gutentags_ctags_tagfile="tags"
+""let g:gutentags_ctags_exclude=["vendor/*", "ui/*", "demo/*", "terraform/*"]
+""map <C-k> :CtrlPTag<Enter>
 
 " tagbar
 nmap <Leader>tt :TagbarToggle<CR>
@@ -41,8 +43,8 @@ nmap <Leader>gt :GoTest -c<CR>
 " command will execute in cwd which is usually the project root.
 nmap <leader>gi :GoInstall github.com/hashicorp/nomad<CR>
 let g:go_fmt_command = "goimports"
-autocmd FileType go setlocal foldmethod=syntax foldlevel=999 foldminlines=3
-autocmd FileType go normal   zR
+""autocmd FileType go setlocal foldmethod=syntax foldlevel=999 foldminlines=3
+""autocmd FileType go normal   zR
 
 " Always draw status line
 set laststatus=2
