@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+if [[ "$1" == "" ]]; then
+	echo "Missing .deb"
+	exit 1
+fi
+
+version=$(dpkg-deb -W "$1" | awk '{ print $2 }')
+newfile=$(echo "$1" | sed -e "s/\.deb$/-${version}.deb/")
+echo mv "$1" "$newfile"
+mv "$1" "$newfile"
