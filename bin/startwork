@@ -1,13 +1,18 @@
 #!/bin/bash
 
+name="work"
+
 if [[ "$TERM_PROGRAM" == "tmux" ]]; then
 	echo "Don't try to start tmux within tmux you silly"
 	exit 1
 fi
 
-name="work"
+if tmux has-session -t "$name"; then
+	echo "$name already running"
+	exit 2
+fi
 
-tmux -2 new-session -Ad -s $name
+tmux new-session -d -s $name
 
 # Window 1; vertical split
 tmux new-window -t $name:1 -n 'scratch'
