@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Go Stuff
-export PATH=$PATH:/usr/local/go/bin:$HOME/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # Git
 source $HOME/bin/git-prompt.sh
