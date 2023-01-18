@@ -5,10 +5,14 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go'
 Plug 'preservim/tagbar'
+Plug 'tpope/vim-vinegar'
 call plug#end()
 
+" Matthew Irish is a genius
+let mapleader=' '
+
 " FZF for ctrlp / file search
-nmap <C-P> :Files<CR>
+nmap <Leader><Leader> :Files<CR>
 
 " Dark mode
 set background=dark
