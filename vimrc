@@ -6,6 +6,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-vinegar'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Matthew Irish is a genius
@@ -19,6 +20,7 @@ set background=dark
 
 " Go
 nmap <Leader>gb :GoBuild<CR>
+nmap <Leader>gi :!go install<CR>
 nmap <Leader>gt :GoTest -c<CR>
 
 " Tagbar
